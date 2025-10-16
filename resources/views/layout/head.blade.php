@@ -11,6 +11,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/slider-range.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
     <link rel="stylesheet" href="assets/css/main.css?v=6.1" />
 </head>

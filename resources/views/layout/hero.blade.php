@@ -1,7 +1,7 @@
  <section class="home-slider position-relative mb-30">
             <div class="home-slide-cover">
                 <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
-                    <div class="single-hero-slider rectangle single-animation-wrap" style="background-image: url(assets/imgs/building.png)">
+                    <div class="single-hero-slider rectangle single-animation-wrap" style="background-image: url(assets/imgs/tukang1.png)">
                         <div class="slider-content">
                             <h1 class="display-2 mb-40" style="color: white">
                                 Don’t miss<br />
