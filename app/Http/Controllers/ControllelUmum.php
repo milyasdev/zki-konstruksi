@@ -8,6 +8,10 @@ class ControllelUmum extends Controller
 {
     public function halamanDepan()
     {
-        return view('layout.master');
+        return view('front');
+    }
+
+    public function halamanLogin(){
+        return view('login');
     }
 }
