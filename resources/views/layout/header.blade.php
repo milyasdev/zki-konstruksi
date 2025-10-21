@@ -1,4 +1,4 @@
-<header class="header-area header-style-1 header-style-5 header-height-2">
+<header class="header-area header-height-2">
         <div class="header-bottom header-bottom-bg-color sticky-bar">
             <div class="container">
                 <div class="header-wrap header-space-between position-relative">
@@ -8,7 +8,7 @@
                     <div class="header-nav d-none d-lg-flex">
                         <div class="main-categori-wrap d-none d-lg-block">
                             <a class="categories-button-active" href="#">
-                                <span class="fi-rs-apps"></span> <span class="et">Trending</span> Categories
+                                <span class=""></span> <span class="">Trending</span> Categories
                                 <i class="fi-rs-angle-down"></i>
                             </a>
                             <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
@@ -48,27 +48,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="more_slide_open" style="display: none">
-                                    <div class="d-flex categori-dropdown-inner">
-                                        <ul>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/icon-1.svg" alt="" />Milks and Dairies</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/icon-2.svg" alt="" />Clothing & beauty</a>
-                                            </li>
-                                        </ul>
-                                        <ul class="end">
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/icon-3.svg" alt="" />Wines & Drinks</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/icon-4.svg" alt="" />Fresh Seafood</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show more...</span></div>
                             </div>
                         </div>
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
@@ -90,10 +69,6 @@
                                 </ul>
                             </nav>
                         </div>
-                    </div>
-                    <div class="hotline d-none d-lg-flex">
-                        <img src="assets/imgs/theme/icons/icon-headphone-white.svg" alt="hotline" />
-                        <p>1900 - 888<span>24/7 Support Center</span></p>
                     </div>
                     <div class="header-action-icon-2 d-block d-lg-none">
                         <div class="burger-icon burger-icon-white">
