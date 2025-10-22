@@ -23,21 +23,14 @@
     </ul>
     <hr />
     <ul class="menu-aside">
-        <li class="menu-item has-submenu">
+        <li class="menu-item has-submenu {{ request()->routeIs('admin.indexKategori') ? 'active' : '' }}">
             <a class="menu-link" href="#">
                 <i class="icon material-icons md-settings"></i>
                 <span class="text">Master</span>
             </a>
             <div class="submenu">
-                <a href="page-settings-1.html">Kategori</a>
-                <a href="page-settings-2.html">Setting sample 2</a>
+                <a href="{{ route('admin.indexKategori') }}" class="{{ request()->routeIs('admin.indexKategori') ? 'active' : '' }}">Kategori</a>
             </div>
-        </li>
-        <li class="menu-item">
-            <a class="menu-link" href="page-blank.html">
-                <i class="icon material-icons md-local_offer"></i>
-                <span class="text"> Starter page </span>
-            </a>
         </li>
     </ul>
     <br />

@@ -4,89 +4,64 @@
         <div class="content-header">
             <div>
                 <h2 class="content-title card-title">Products List</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Berbagai Data Data Produk</p>
             </div>
             <div>
                 <a href="{{ route('admin.formProduct') }}" class="btn btn-primary btn-sm rounded">Create new</a>
             </div>
         </div>
         <div class="card mb-4">
-            <!-- card-header end// -->
             <div class="card-body">
-                <article class="itemlist">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-sm-4 col-8 flex-grow-1 col-name">
-                            <a class="itemside" href="#">
-                                <div class="left">
-                                    <img src="assets/imgs/items/1.jpg" class="img-sm img-thumbnail" alt="Item" />
-                                </div>
-                                <div class="info">
-                                    <h6 class="mb-0">Seeds of Change Organic Quinoa</h6>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-price"><span>$34.50</span></div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-status">
-                            <span class="badge rounded-pill alert-success">Active</span>
-                        </div>
-                        <div class="col-lg-1 col-sm-2 col-4 col-date">
-                            <span>02.11.2021</span>
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-action text-end">
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i
-                                    class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i
-                                    class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- row .// -->
-                </article>
-                <article class="itemlist">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-sm-4 col-8 flex-grow-1 col-name">
-                            <a class="itemside" href="#">
-                                <div class="left">
-                                    <img src="assets/imgs/items/1.jpg" class="img-sm img-thumbnail" alt="Item" />
-                                </div>
-                                <div class="info">
-                                    <h6 class="mb-0">Seeds of Change Organic Quinoa</h6>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-price"><span>$34.50</span></div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-status">
-                            <span class="badge rounded-pill alert-success">Active</span>
-                        </div>
-                        <div class="col-lg-1 col-sm-2 col-4 col-date">
-                            <span>02.11.2021</span>
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-action text-end">
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i
-                                    class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i
-                                    class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- row .// -->
-                </article>
-                <!-- itemlist  .// -->
+                <div class="table-responsive">
+                    <table class="table align-middle table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 5%;">No</th>
+                                <th scope="col" style="width: 30%;">Item</th>
+                                <th scope="col" style="width: 15%;">Harga</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Kategori</th>
+                                <th scope="col" style="width: 30%;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $no = 1;
+                            @endphp
+                            @foreach ($data as $item)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>
+                                        <a class="itemside" href="#">
+                                            <div>
+                                                <img src="{{ route('admin.portal.secure.image', $item->gambar) }}"
+                                                    class="img-sm img-thumbnail" alt="{{ $item->judul }}" />
+                                            </div>
+                                            <div class="info">
+                                                <h6 class="mb-0">{{ $item->judul }}</h6>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td><span>{{ $item->harga }}</span></td>
+                                    <td>
+                                        <span class="badge rounded-pill alert-success" style="color: green">Active</span>
+                                    </td>
+                                    <td><span>{{ $item->kategoriRelasi->judul }}</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.formProductEdit', $item->id) }}" class="btn btn-sm font-sm rounded btn-brand">
+                                            <i class="material-icons md-edit"></i> Edit
+                                        </a>
+                                        <a href="{{ route('admin.deleteProduct', $item->id) }}"
+                                            class="btn btn-sm font-sm btn-light rounded">
+                                            <i class="material-icons md-delete_forever"></i> Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <!-- card-body end// -->
-        </div>
-        <!-- card end// -->
-        <div class="pagination-area mt-30 mb-50">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-start">
-                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                    <li class="page-item"><a class="page-link" href="#">02</a></li>
-                    <li class="page-item"><a class="page-link" href="#">03</a></li>
-                    <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-                    <li class="page-item"><a class="page-link" href="#">16</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#"><i class="material-icons md-chevron_right"></i></a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </section>
 @endsection

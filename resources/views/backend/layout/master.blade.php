@@ -21,7 +21,7 @@
         @yield('content')
         @include('backend.layout.footer')
     </main>
+    @yield('js')
     @include('backend.layout.js')
 </body>
-
 </html>
